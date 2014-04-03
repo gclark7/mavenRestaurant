@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core" 
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <title>Menu Page</title>
+    </h:head>
+    <h:body>
+        <p:dataTable id="entire-menu" value="#{menuController.menus}" var="menu" >
+             <p:column headerText="item id">
+                 <h:outputText value="#{menu.itemId}" />
+            </p:column>
+            <p:column headerText="category">
+                <h:outputText value="#{menu.itemCategory.category}" />
+            </p:column>
+            <p:column headerText="type">
+                <h:outputText value="#{menu.itemType.type}" />
+            </p:column>
+            <p:column headerText="description">
+                <h:outputText value="#{menu.itemDescription}" />
+            </p:column>
+        </p:dataTable>
+    </h:body>
+</html>
+
